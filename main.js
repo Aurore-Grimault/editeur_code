@@ -14,6 +14,7 @@ function setupEditor()
   editor.getSession().setMode("ace/mode/html");
   editor.setValue(`<!DOCTYPE html>
 <html>
+
 <head>
 </head>
 
