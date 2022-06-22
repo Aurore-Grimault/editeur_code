@@ -1,9 +1,10 @@
 html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
 
-#editeur {
+#editor {
     height: 100%;
     width:50%;
     display:inline-block;
+    background-color: rgb(70, 31, 106);
 }
 
 #container {
@@ -18,6 +19,7 @@ html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
 	height:100%;
 	display:inline-block;
 	width:50%;
+    background-color: rgb(203, 167, 237);
 }
 
 .ace_editor .ace_marker-layer .ace_bracket { display: none }
