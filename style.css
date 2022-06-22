@@ -1,25 +1,37 @@
-html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
-
-#editor {
-    height: 100%;
-    width:50%;
-    display:inline-block;
-    background-color: rgb(70, 31, 106);
-}
-
-#container {
-    height:100%;
-	width:auto;
-    white-space : nowrap; 
-    overflow : hidden;
-    position:relative;
-}
-
-#iframe {
-	height:100%;
-	display:inline-block;
-	width:50%;
-    background-color: rgb(203, 167, 237);
-}
-
-.ace_editor .ace_marker-layer .ace_bracket { display: none }
+iframe {
+    bottom: 0;
+    color: #fff;
+    position: relative;
+    width: 95%;
+    height: 20em;
+    background-color: rgb(222, 140, 227);
+  }
+  
+  body{
+     font-family: 'Ubuntu Mono', monospace;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #fff;
+    border: 3px;
+  
+  }
+  
+  textarea {
+    width: 30%;
+    min-height: 250px;
+    overflow: scroll;
+    margin: auto;
+    color: #fff;
+    background-color: rgb(94, 8, 97);
+    outline: none;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14px;
+  }
+  
+  html{
+    background-color: rgb(94, 8, 97);
+    font-size: 30px;
+  }
+  

@@ -1,47 +1,24 @@
-function update()
-{
-	var idoc = document.getElementById('iframe').contentWindow.document;
+function run() {
+  var html = document.getElementById("html");
+  var css = document.getElementById("css");
+  var js = document.getElementById("js");
+  var output = document.getElementById("output")
+  
+  .contentWindow.document;
 
-	idoc.open();
-	idoc.write(editor.getValue());
-	idoc.close();
+  document.body.onkeyup = function() {
+  output.open();
+  output.writeln(
+      html.value +
+        "<style>" +
+        css.value +
+        "</style>" +
+        "<script>" +
+        js.value +
+        "</script>"
+    );
+    output.close();
+  };
 }
 
-function setupEditor()
-{
-  window.editor = ace.edit("editor");
-  editor.setTheme("ace/theme/monokai");
-  editor.getSession().setMode("ace/mode/html");
-  editor.setValue(`<!DOCTYPE html>
-<html>
-
-<head>
-</head>
-
-<body>
-</body>
-
-</html>`,1); 
-
-  editor.getSession().on('change', function() {
-    update();
-  });
-
-  editor.focus();
-  
-  
-  editor.setOptions({
-    fontSize: "16pt",
-    showLineNumbers: false,
-    showGutter: false,
-    vScrollBarAlwaysVisible:true,
-    enableBasicAutocompletion: false, enableLiveAutocompletion: false
-  });
-
-  editor.setShowPrintMargin(false);
-  editor.setBehavioursEnabled(false);
-}
-
-setupEditor();
-update();
-  
+run();
